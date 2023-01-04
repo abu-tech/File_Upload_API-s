@@ -7,4 +7,10 @@ app.use(cookieParser());
 
 app.use("/", apiRoute);
 
+app.get("*", (req, res) => {
+    res.json({
+        message: "This is not the working url"
+    })
+})
+
 module.exports = app;
