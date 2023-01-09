@@ -197,7 +197,7 @@ exports.mergeVedioAndAudio = async (req, res) => {
       .audioCodec("aac")
       .save(`public/upload/${fileName}`)
       .on("error", (err) => {
-        throw err;
+        throw err
       })
       .on("end", () => {
         // Delete the original video and audio files in the temp folder
